@@ -5,9 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Connection;
+using Processing;
 
 namespace TensomUI
 {
@@ -17,7 +19,11 @@ namespace TensomUI
         string arduino_port;
         int cycle_type;
         string[] cycle_types = { "меандр","треугольник","синус" };
-        
+        int cur_time = 0;
+
+        List<double[]> data_arr = new List<double[]>();
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -39,7 +45,44 @@ namespace TensomUI
         private void but_connect_Click(object sender, EventArgs e)
         {
             tensom = new Tensom(arduino_port);
+            try
+            {
+                Thread myThread = new Thread(feedback);
+                myThread.Start(); //запускаем поток
+            }
+            catch
+            {
+
+            }
             //tensom?.connectStart();
+        }
+        async void feedback()
+        {
+            while (tensom.isOpen())
+            {
+                await Task.Delay(20);
+                try
+                {
+
+                    var res = tensom.reseav();
+                    if (res.Length>5)
+                    {
+                        var vals = res.Trim().Split(' ');
+                        var data = new double[] { cur_time, Convert.ToDouble(vals[0]), Convert.ToDouble(vals[1]), Convert.ToDouble(vals[2])};
+                        data_arr.Add(data);
+                        cur_time++;
+                        imB_graphics.Image = DataProcessing.data_to_mat(data_arr, imB_graphics.Size);
+                        //imB_graphics.Update();
+                        //Console.WriteLine(vals[0]+", "+ vals[1] + ", " + vals[2]);
+                    }
+                    
+                }
+                catch
+                {
+
+                }
+                
+            }
         }
 
         private void but_enable_force_Click(object sender, EventArgs e)
@@ -65,7 +108,7 @@ namespace TensomUI
         private void but_set_force_Click(object sender, EventArgs e)
         {
             int force = Convert.ToInt32(text_b_force_dest.Text);
-            tensom?.setForce(force);
+           
         }
         private void but_cycle_settings_Click(object sender, EventArgs e)
         {
@@ -97,6 +140,20 @@ namespace TensomUI
             cycle_type = combo_cycle_type.SelectedIndex+1;
         }
 
-        
+        private void but_enable_light_Click(object sender, EventArgs e)
+        {
+            tensom?.enableLight(0);
+        }
+
+        private void but_disable_light_Click(object sender, EventArgs e)
+        {
+            tensom?.enableLight(1);
+        }
+
+        private void but_test_Click(object sender, EventArgs e)
+        {
+            imB_graphics.Image = DataProcessing.data_to_mat(data_arr, imB_graphics.Size);
+            imB_graphics.Update();
+        }
     }
 }

@@ -19,7 +19,8 @@ namespace Connection
             sensor_down=6,
             force_max = 7,
             time_force = 8,
-            time_relax = 9;
+            time_relax = 9,
+            light_en = 10;
 
         int on = 1, off = 0;
         int up = 0, stop = 1, down = 2;
@@ -81,6 +82,12 @@ namespace Connection
             send(_cycle_type, cycle_type);
         }
 
+        public void enableLight(int _enable)
+        {
+            send(_enable, light_en);
+        }
+
+        
 
     }
 }

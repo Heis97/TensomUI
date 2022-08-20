@@ -259,5 +259,10 @@ namespace Connection
             }
         }
         */
+
+        public bool isOpen()
+        {
+            return serialPort.IsOpen;
+        }
     }
 }

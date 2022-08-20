@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.but_find_ports = new System.Windows.Forms.Button();
             this.combo_ard_port = new System.Windows.Forms.ComboBox();
             this.but_connect = new System.Windows.Forms.Button();
@@ -48,13 +49,19 @@
             this.combo_cycle_type = new System.Windows.Forms.ComboBox();
             this.but_cycle_start = new System.Windows.Forms.Button();
             this.but_cycle_stop = new System.Windows.Forms.Button();
+            this.but_disable_light = new System.Windows.Forms.Button();
+            this.but_enable_light = new System.Windows.Forms.Button();
+            this.imB_graphics = new Emgu.CV.UI.ImageBox();
+            this.but_test = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.imB_graphics)).BeginInit();
             this.SuspendLayout();
             // 
             // but_find_ports
             // 
-            this.but_find_ports.Location = new System.Drawing.Point(12, 12);
+            this.but_find_ports.Location = new System.Drawing.Point(9, 10);
+            this.but_find_ports.Margin = new System.Windows.Forms.Padding(2);
             this.but_find_ports.Name = "but_find_ports";
-            this.but_find_ports.Size = new System.Drawing.Size(138, 37);
+            this.but_find_ports.Size = new System.Drawing.Size(104, 30);
             this.but_find_ports.TabIndex = 0;
             this.but_find_ports.Text = "Найти порты";
             this.but_find_ports.UseVisualStyleBackColor = true;
@@ -63,17 +70,19 @@
             // combo_ard_port
             // 
             this.combo_ard_port.FormattingEnabled = true;
-            this.combo_ard_port.Location = new System.Drawing.Point(185, 19);
+            this.combo_ard_port.Location = new System.Drawing.Point(139, 15);
+            this.combo_ard_port.Margin = new System.Windows.Forms.Padding(2);
             this.combo_ard_port.Name = "combo_ard_port";
-            this.combo_ard_port.Size = new System.Drawing.Size(136, 24);
+            this.combo_ard_port.Size = new System.Drawing.Size(103, 21);
             this.combo_ard_port.TabIndex = 1;
             this.combo_ard_port.SelectedIndexChanged += new System.EventHandler(this.combo_ard_port_SelectedIndexChanged);
             // 
             // but_connect
             // 
-            this.but_connect.Location = new System.Drawing.Point(183, 55);
+            this.but_connect.Location = new System.Drawing.Point(137, 45);
+            this.but_connect.Margin = new System.Windows.Forms.Padding(2);
             this.but_connect.Name = "but_connect";
-            this.but_connect.Size = new System.Drawing.Size(138, 37);
+            this.but_connect.Size = new System.Drawing.Size(104, 30);
             this.but_connect.TabIndex = 2;
             this.but_connect.Text = "Подключиться";
             this.but_connect.UseVisualStyleBackColor = true;
@@ -81,9 +90,10 @@
             // 
             // but_disconnect
             // 
-            this.but_disconnect.Location = new System.Drawing.Point(183, 98);
+            this.but_disconnect.Location = new System.Drawing.Point(137, 80);
+            this.but_disconnect.Margin = new System.Windows.Forms.Padding(2);
             this.but_disconnect.Name = "but_disconnect";
-            this.but_disconnect.Size = new System.Drawing.Size(138, 37);
+            this.but_disconnect.Size = new System.Drawing.Size(104, 30);
             this.but_disconnect.TabIndex = 3;
             this.but_disconnect.Text = "Отключиться";
             this.but_disconnect.UseVisualStyleBackColor = true;
@@ -91,9 +101,10 @@
             // 
             // but_enable_force
             // 
-            this.but_enable_force.Location = new System.Drawing.Point(12, 165);
+            this.but_enable_force.Location = new System.Drawing.Point(9, 134);
+            this.but_enable_force.Margin = new System.Windows.Forms.Padding(2);
             this.but_enable_force.Name = "but_enable_force";
-            this.but_enable_force.Size = new System.Drawing.Size(138, 37);
+            this.but_enable_force.Size = new System.Drawing.Size(104, 30);
             this.but_enable_force.TabIndex = 4;
             this.but_enable_force.Text = "Включить силу";
             this.but_enable_force.UseVisualStyleBackColor = true;
@@ -101,9 +112,10 @@
             // 
             // but_disable_force
             // 
-            this.but_disable_force.Location = new System.Drawing.Point(12, 208);
+            this.but_disable_force.Location = new System.Drawing.Point(9, 169);
+            this.but_disable_force.Margin = new System.Windows.Forms.Padding(2);
             this.but_disable_force.Name = "but_disable_force";
-            this.but_disable_force.Size = new System.Drawing.Size(138, 37);
+            this.but_disable_force.Size = new System.Drawing.Size(104, 30);
             this.but_disable_force.TabIndex = 5;
             this.but_disable_force.Text = "Выключить силу";
             this.but_disable_force.UseVisualStyleBackColor = true;
@@ -111,9 +123,10 @@
             // 
             // but_set_force
             // 
-            this.but_set_force.Location = new System.Drawing.Point(12, 251);
+            this.but_set_force.Location = new System.Drawing.Point(9, 204);
+            this.but_set_force.Margin = new System.Windows.Forms.Padding(2);
             this.but_set_force.Name = "but_set_force";
-            this.but_set_force.Size = new System.Drawing.Size(138, 49);
+            this.but_set_force.Size = new System.Drawing.Size(104, 40);
             this.but_set_force.TabIndex = 6;
             this.but_set_force.Text = "Установить значение силы";
             this.but_set_force.UseVisualStyleBackColor = true;
@@ -121,17 +134,19 @@
             // 
             // text_b_force_dest
             // 
-            this.text_b_force_dest.Location = new System.Drawing.Point(183, 264);
+            this.text_b_force_dest.Location = new System.Drawing.Point(137, 214);
+            this.text_b_force_dest.Margin = new System.Windows.Forms.Padding(2);
             this.text_b_force_dest.Name = "text_b_force_dest";
-            this.text_b_force_dest.Size = new System.Drawing.Size(100, 22);
+            this.text_b_force_dest.Size = new System.Drawing.Size(76, 20);
             this.text_b_force_dest.TabIndex = 7;
             this.text_b_force_dest.Text = "0";
             // 
             // but_cycle_settings
             // 
-            this.but_cycle_settings.Location = new System.Drawing.Point(12, 326);
+            this.but_cycle_settings.Location = new System.Drawing.Point(9, 265);
+            this.but_cycle_settings.Margin = new System.Windows.Forms.Padding(2);
             this.but_cycle_settings.Name = "but_cycle_settings";
-            this.but_cycle_settings.Size = new System.Drawing.Size(138, 49);
+            this.but_cycle_settings.Size = new System.Drawing.Size(104, 40);
             this.but_cycle_settings.TabIndex = 8;
             this.but_cycle_settings.Text = "Установить настройки цикла";
             this.but_cycle_settings.UseVisualStyleBackColor = true;
@@ -139,60 +154,67 @@
             // 
             // text_b_time_force
             // 
-            this.text_b_time_force.Location = new System.Drawing.Point(221, 381);
+            this.text_b_time_force.Location = new System.Drawing.Point(166, 310);
+            this.text_b_time_force.Margin = new System.Windows.Forms.Padding(2);
             this.text_b_time_force.Name = "text_b_time_force";
-            this.text_b_time_force.Size = new System.Drawing.Size(100, 22);
+            this.text_b_time_force.Size = new System.Drawing.Size(76, 20);
             this.text_b_time_force.TabIndex = 9;
             this.text_b_time_force.Text = "20000";
             // 
             // text_b_time_relax
             // 
-            this.text_b_time_relax.Location = new System.Drawing.Point(221, 409);
+            this.text_b_time_relax.Location = new System.Drawing.Point(166, 332);
+            this.text_b_time_relax.Margin = new System.Windows.Forms.Padding(2);
             this.text_b_time_relax.Name = "text_b_time_relax";
-            this.text_b_time_relax.Size = new System.Drawing.Size(100, 22);
+            this.text_b_time_relax.Size = new System.Drawing.Size(76, 20);
             this.text_b_time_relax.TabIndex = 10;
             this.text_b_time_relax.Text = "4000";
             // 
             // text_b_force_max
             // 
-            this.text_b_force_max.Location = new System.Drawing.Point(221, 440);
+            this.text_b_force_max.Location = new System.Drawing.Point(166, 358);
+            this.text_b_force_max.Margin = new System.Windows.Forms.Padding(2);
             this.text_b_force_max.Name = "text_b_force_max";
-            this.text_b_force_max.Size = new System.Drawing.Size(100, 22);
+            this.text_b_force_max.Size = new System.Drawing.Size(76, 20);
             this.text_b_force_max.TabIndex = 11;
             this.text_b_force_max.Text = "6000";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 384);
+            this.label1.Location = new System.Drawing.Point(10, 312);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 16);
+            this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Время усилия";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 412);
+            this.label2.Location = new System.Drawing.Point(9, 335);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 16);
+            this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Время релаксации";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 440);
+            this.label3.Location = new System.Drawing.Point(10, 358);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 16);
+            this.label3.Size = new System.Drawing.Size(141, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Максимальная амплитуда";
             // 
             // but_tens_up
             // 
-            this.but_tens_up.Location = new System.Drawing.Point(183, 165);
+            this.but_tens_up.Location = new System.Drawing.Point(137, 134);
+            this.but_tens_up.Margin = new System.Windows.Forms.Padding(2);
             this.but_tens_up.Name = "but_tens_up";
-            this.but_tens_up.Size = new System.Drawing.Size(138, 37);
+            this.but_tens_up.Size = new System.Drawing.Size(104, 30);
             this.but_tens_up.TabIndex = 15;
             this.but_tens_up.Text = "Поднять";
             this.but_tens_up.UseVisualStyleBackColor = true;
@@ -200,9 +222,10 @@
             // 
             // but_tens_down
             // 
-            this.but_tens_down.Location = new System.Drawing.Point(183, 208);
+            this.but_tens_down.Location = new System.Drawing.Point(137, 169);
+            this.but_tens_down.Margin = new System.Windows.Forms.Padding(2);
             this.but_tens_down.Name = "but_tens_down";
-            this.but_tens_down.Size = new System.Drawing.Size(138, 37);
+            this.but_tens_down.Size = new System.Drawing.Size(104, 30);
             this.but_tens_down.TabIndex = 16;
             this.but_tens_down.Text = "Опустить";
             this.but_tens_down.UseVisualStyleBackColor = true;
@@ -211,17 +234,19 @@
             // combo_cycle_type
             // 
             this.combo_cycle_type.FormattingEnabled = true;
-            this.combo_cycle_type.Location = new System.Drawing.Point(185, 339);
+            this.combo_cycle_type.Location = new System.Drawing.Point(139, 275);
+            this.combo_cycle_type.Margin = new System.Windows.Forms.Padding(2);
             this.combo_cycle_type.Name = "combo_cycle_type";
-            this.combo_cycle_type.Size = new System.Drawing.Size(136, 24);
+            this.combo_cycle_type.Size = new System.Drawing.Size(103, 21);
             this.combo_cycle_type.TabIndex = 17;
             this.combo_cycle_type.SelectedIndexChanged += new System.EventHandler(this.combo_cycle_type_SelectedIndexChanged);
             // 
             // but_cycle_start
             // 
-            this.but_cycle_start.Location = new System.Drawing.Point(16, 488);
+            this.but_cycle_start.Location = new System.Drawing.Point(12, 396);
+            this.but_cycle_start.Margin = new System.Windows.Forms.Padding(2);
             this.but_cycle_start.Name = "but_cycle_start";
-            this.but_cycle_start.Size = new System.Drawing.Size(138, 49);
+            this.but_cycle_start.Size = new System.Drawing.Size(104, 40);
             this.but_cycle_start.TabIndex = 18;
             this.but_cycle_start.Text = "Запустить цикл";
             this.but_cycle_start.UseVisualStyleBackColor = true;
@@ -229,19 +254,65 @@
             // 
             // but_cycle_stop
             // 
-            this.but_cycle_stop.Location = new System.Drawing.Point(183, 488);
+            this.but_cycle_stop.Location = new System.Drawing.Point(137, 396);
+            this.but_cycle_stop.Margin = new System.Windows.Forms.Padding(2);
             this.but_cycle_stop.Name = "but_cycle_stop";
-            this.but_cycle_stop.Size = new System.Drawing.Size(138, 49);
+            this.but_cycle_stop.Size = new System.Drawing.Size(104, 40);
             this.but_cycle_stop.TabIndex = 19;
             this.but_cycle_stop.Text = "Остановить цикл";
             this.but_cycle_stop.UseVisualStyleBackColor = true;
             this.but_cycle_stop.Click += new System.EventHandler(this.but_cycle_stop_Click);
             // 
+            // but_disable_light
+            // 
+            this.but_disable_light.Location = new System.Drawing.Point(13, 530);
+            this.but_disable_light.Margin = new System.Windows.Forms.Padding(2);
+            this.but_disable_light.Name = "but_disable_light";
+            this.but_disable_light.Size = new System.Drawing.Size(104, 30);
+            this.but_disable_light.TabIndex = 21;
+            this.but_disable_light.Text = "Выключить свет";
+            this.but_disable_light.UseVisualStyleBackColor = true;
+            this.but_disable_light.Click += new System.EventHandler(this.but_disable_light_Click);
+            // 
+            // but_enable_light
+            // 
+            this.but_enable_light.Location = new System.Drawing.Point(13, 495);
+            this.but_enable_light.Margin = new System.Windows.Forms.Padding(2);
+            this.but_enable_light.Name = "but_enable_light";
+            this.but_enable_light.Size = new System.Drawing.Size(104, 30);
+            this.but_enable_light.TabIndex = 20;
+            this.but_enable_light.Text = "Включить свет";
+            this.but_enable_light.UseVisualStyleBackColor = true;
+            this.but_enable_light.Click += new System.EventHandler(this.but_enable_light_Click);
+            // 
+            // imB_graphics
+            // 
+            this.imB_graphics.Location = new System.Drawing.Point(298, 16);
+            this.imB_graphics.Name = "imB_graphics";
+            this.imB_graphics.Size = new System.Drawing.Size(704, 509);
+            this.imB_graphics.TabIndex = 2;
+            this.imB_graphics.TabStop = false;
+            // 
+            // but_test
+            // 
+            this.but_test.Location = new System.Drawing.Point(156, 495);
+            this.but_test.Margin = new System.Windows.Forms.Padding(2);
+            this.but_test.Name = "but_test";
+            this.but_test.Size = new System.Drawing.Size(104, 30);
+            this.but_test.TabIndex = 22;
+            this.but_test.Text = "test";
+            this.but_test.UseVisualStyleBackColor = true;
+            this.but_test.Click += new System.EventHandler(this.but_test_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1249, 719);
+            this.ClientSize = new System.Drawing.Size(1295, 584);
+            this.Controls.Add(this.but_test);
+            this.Controls.Add(this.imB_graphics);
+            this.Controls.Add(this.but_disable_light);
+            this.Controls.Add(this.but_enable_light);
             this.Controls.Add(this.but_cycle_stop);
             this.Controls.Add(this.but_cycle_start);
             this.Controls.Add(this.combo_cycle_type);
@@ -262,8 +333,10 @@
             this.Controls.Add(this.but_connect);
             this.Controls.Add(this.combo_ard_port);
             this.Controls.Add(this.but_find_ports);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.imB_graphics)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +364,10 @@
         private System.Windows.Forms.ComboBox combo_cycle_type;
         private System.Windows.Forms.Button but_cycle_start;
         private System.Windows.Forms.Button but_cycle_stop;
+        private System.Windows.Forms.Button but_disable_light;
+        private System.Windows.Forms.Button but_enable_light;
+        private Emgu.CV.UI.ImageBox imB_graphics;
+        private System.Windows.Forms.Button but_test;
     }
 }
 
