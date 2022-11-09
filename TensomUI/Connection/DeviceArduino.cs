@@ -104,6 +104,8 @@ namespace Connection
                         Console.WriteLine("Out: " + Mes1);
 
                         this.serialPort.WriteLine(Mes1);
+                        Thread.Sleep(10);
+                        Console.WriteLine( reseav());
                     }
                     catch
                     {

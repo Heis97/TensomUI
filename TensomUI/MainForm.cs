@@ -108,7 +108,7 @@ namespace TensomUI
         private void but_set_force_Click(object sender, EventArgs e)
         {
             int force = Convert.ToInt32(text_b_force_dest.Text);
-           
+           tensom?.setForce(force);
         }
         private void but_cycle_settings_Click(object sender, EventArgs e)
         {

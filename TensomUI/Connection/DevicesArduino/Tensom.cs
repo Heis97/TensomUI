@@ -16,7 +16,7 @@ namespace Connection
             force_en=3, 
             cycle_type = 4, 
             sensor_up=5, 
-            sensor_down=6,
+            sensor_down=6,  
             force_max = 7,
             time_force = 8,
             time_relax = 9,
