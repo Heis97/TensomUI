@@ -47,8 +47,9 @@ namespace TensomUI
             tensom = new Tensom(arduino_port);
             try
             {
-                Thread myThread = new Thread(feedback);
-                myThread.Start(); //запускаем поток
+              //  Thread myThread = new Thread(feedback);
+              //  myThread.Start(); //запускаем поток
+                timer_feedback.Start();
             }
             catch
             {
@@ -154,6 +155,44 @@ namespace TensomUI
         {
             imB_graphics.Image = DataProcessing.data_to_mat(data_arr, imB_graphics.Size);
             imB_graphics.Update();
+        }
+
+        private void timer_feedback_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                var res = tensom.reseav();
+                if (res.Length > 5)
+                {
+                    var vals = res.Trim().Split(' ');
+                    var data = new double[] { cur_time, Convert.ToDouble(vals[0]), Convert.ToDouble(vals[1]), Convert.ToDouble(vals[2]) };
+                    label_feedback.Text = res;
+                    data_arr.Add(data);
+                    cur_time++;
+                    imB_graphics.Image = DataProcessing.data_to_mat(data_arr, imB_graphics.Size);
+                    //imB_graphics.Update();
+                    //Console.WriteLine(vals[0]+", "+ vals[1] + ", " + vals[2]);
+                }
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void but_clear_data_Click(object sender, EventArgs e)
+        {
+            data_arr = new List<double[]>();
+            cur_time = 0;
+        }
+
+        private void but_save_data_Click(object sender, EventArgs e)
+        {
+            DataProcessing.saveData(data_arr, DateTime.Now.Month.ToString()+"_"+ DateTime.Now.Day.ToString() + "_" +
+                DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" +
+                DateTime.Now.Second.ToString() + "_");
         }
     }
 }

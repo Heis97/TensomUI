@@ -53,6 +53,11 @@
             this.but_enable_light = new System.Windows.Forms.Button();
             this.imB_graphics = new Emgu.CV.UI.ImageBox();
             this.but_test = new System.Windows.Forms.Button();
+            this.timer_feedback = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label_feedback = new System.Windows.Forms.Label();
+            this.but_clear_data = new System.Windows.Forms.Button();
+            this.but_save_data = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imB_graphics)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +164,7 @@
             this.text_b_time_force.Name = "text_b_time_force";
             this.text_b_time_force.Size = new System.Drawing.Size(76, 20);
             this.text_b_time_force.TabIndex = 9;
-            this.text_b_time_force.Text = "20000";
+            this.text_b_time_force.Text = "500";
             // 
             // text_b_time_relax
             // 
@@ -177,7 +182,7 @@
             this.text_b_force_max.Name = "text_b_force_max";
             this.text_b_force_max.Size = new System.Drawing.Size(76, 20);
             this.text_b_force_max.TabIndex = 11;
-            this.text_b_force_max.Text = "6000";
+            this.text_b_force_max.Text = "1000";
             // 
             // label1
             // 
@@ -304,11 +309,60 @@
             this.but_test.UseVisualStyleBackColor = true;
             this.but_test.Click += new System.EventHandler(this.but_test_Click);
             // 
+            // timer_feedback
+            // 
+            this.timer_feedback.Interval = 20;
+            this.timer_feedback.Tick += new System.EventHandler(this.timer_feedback_Tick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(31, 438);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 52);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Текущ Сила\r\nТреб Сила \r\nПоложение\r\nТемпература   ";
+            // 
+            // label_feedback
+            // 
+            this.label_feedback.AutoSize = true;
+            this.label_feedback.Location = new System.Drawing.Point(134, 438);
+            this.label_feedback.Name = "label_feedback";
+            this.label_feedback.Size = new System.Drawing.Size(200, 13);
+            this.label_feedback.TabIndex = 24;
+            this.label_feedback.Text = "Текущ Сила, Треб Сила, Положение   ";
+            // 
+            // but_clear_data
+            // 
+            this.but_clear_data.Location = new System.Drawing.Point(1180, 134);
+            this.but_clear_data.Margin = new System.Windows.Forms.Padding(2);
+            this.but_clear_data.Name = "but_clear_data";
+            this.but_clear_data.Size = new System.Drawing.Size(104, 30);
+            this.but_clear_data.TabIndex = 25;
+            this.but_clear_data.Text = "Очистить график";
+            this.but_clear_data.UseVisualStyleBackColor = true;
+            this.but_clear_data.Click += new System.EventHandler(this.but_clear_data_Click);
+            // 
+            // but_save_data
+            // 
+            this.but_save_data.Location = new System.Drawing.Point(1180, 169);
+            this.but_save_data.Margin = new System.Windows.Forms.Padding(2);
+            this.but_save_data.Name = "but_save_data";
+            this.but_save_data.Size = new System.Drawing.Size(104, 45);
+            this.but_save_data.TabIndex = 26;
+            this.but_save_data.Text = "Сохранить график";
+            this.but_save_data.UseVisualStyleBackColor = true;
+            this.but_save_data.Click += new System.EventHandler(this.but_save_data_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1295, 584);
+            this.Controls.Add(this.but_save_data);
+            this.Controls.Add(this.but_clear_data);
+            this.Controls.Add(this.label_feedback);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.but_test);
             this.Controls.Add(this.imB_graphics);
             this.Controls.Add(this.but_disable_light);
@@ -368,6 +422,11 @@
         private System.Windows.Forms.Button but_enable_light;
         private Emgu.CV.UI.ImageBox imB_graphics;
         private System.Windows.Forms.Button but_test;
+        private System.Windows.Forms.Timer timer_feedback;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_feedback;
+        private System.Windows.Forms.Button but_clear_data;
+        private System.Windows.Forms.Button but_save_data;
     }
 }
 

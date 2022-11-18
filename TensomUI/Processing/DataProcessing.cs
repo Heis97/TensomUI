@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,22 +12,27 @@ namespace Processing
 {
     class DataProcessing
     {
+        //static Mat im;
         static public Mat data_to_mat(List<double[]> data, Size size_mat)
         {
 
             var data_n =  normalize_data(data, size_mat);
             var colors = new Color[] {Color.Red,Color.Green,Color.Blue,Color.Pink,Color.Purple};
             var im = new Image<Bgr, byte>(size_mat);
-            im.SetValue(new Bgr(255,255,255));
-            for (int i = 0; i < data_n.Count; i++)
+            //im.SetTo(new )
+            im.SetValue(new Bgr(0,0,0));
+            for (int i = 1; i < data_n.Count; i++)
             {
                 for (int j = 1; j < data_n[i].Length; j++)
                 {
-                    im.Data[(int)data_n[i][j], (int)data_n[i][0], 2] = colors[j].R;
-                    im.Data[(int)data_n[i][j], (int)data_n[i][0], 1] = colors[j].G;
-                    im.Data[(int)data_n[i][j], (int)data_n[i][0], 0] = colors[j].B;
+                    CvInvoke.Line(im,
+                        new Point((int) data_n[i][0], (int)data_n[i][j]), 
+                        new Point((int)data_n[i-1][0], (int)data_n[i-1][j]),
+                        new MCvScalar(colors[j].R, colors[j].G, colors[j].B));
                 }
             }
+
+            
             return im.Mat;
         }
 
@@ -62,6 +68,22 @@ namespace Processing
             }
             
             return data_norm;
+        }
+
+        static public void saveData(List<double[]> data_n,string name)
+        {
+            var sb = new StringBuilder();
+            for (int i = 1; i < data_n.Count; i++)
+            {
+                for (int j = 1; j < data_n[i].Length; j++)
+                {
+                    sb.Append(data_n[i][j]+" ");
+                }
+                sb.Append("\n");
+            }
+            var wr = new StreamWriter(name + ".txt");
+            wr.Write(sb.ToString());
+            wr.Close();
         }
     }
 }
