@@ -58,7 +58,9 @@
             this.label_feedback = new System.Windows.Forms.Label();
             this.but_clear_data = new System.Windows.Forms.Button();
             this.but_save_data = new System.Windows.Forms.Button();
+            this.imageBox1 = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.imB_graphics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // but_find_ports
@@ -354,11 +356,20 @@
             this.but_save_data.UseVisualStyleBackColor = true;
             this.but_save_data.Click += new System.EventHandler(this.but_save_data_Click);
             // 
+            // imageBox1
+            // 
+            this.imageBox1.Location = new System.Drawing.Point(1008, 228);
+            this.imageBox1.Name = "imageBox1";
+            this.imageBox1.Size = new System.Drawing.Size(281, 262);
+            this.imageBox1.TabIndex = 27;
+            this.imageBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1295, 584);
+            this.Controls.Add(this.imageBox1);
             this.Controls.Add(this.but_save_data);
             this.Controls.Add(this.but_clear_data);
             this.Controls.Add(this.label_feedback);
@@ -391,6 +402,7 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.imB_graphics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,6 +439,7 @@
         private System.Windows.Forms.Label label_feedback;
         private System.Windows.Forms.Button but_clear_data;
         private System.Windows.Forms.Button but_save_data;
+        private Emgu.CV.UI.ImageBox imageBox1;
     }
 }
 

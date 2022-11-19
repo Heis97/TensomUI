@@ -12,7 +12,6 @@ namespace Processing
 {
     class DataProcessing
     {
-        //static Mat im;
         static public Mat data_to_mat(List<double[]> data, Size size_mat)
         {
 

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Connection;
 using Processing;
+using Video;
 
 namespace TensomUI
 {
@@ -29,6 +30,7 @@ namespace TensomUI
             InitializeComponent();
             combo_cycle_type.Items.AddRange(cycle_types);
             combo_cycle_type.SelectedIndex = 0;
+            
         }
 
         private void but_find_ports_Click(object sender, EventArgs e)
@@ -153,8 +155,9 @@ namespace TensomUI
 
         private void but_test_Click(object sender, EventArgs e)
         {
-            imB_graphics.Image = DataProcessing.data_to_mat(data_arr, imB_graphics.Size);
-            imB_graphics.Update();
+            /*imB_graphics.Image = DataProcessing.data_to_mat(data_arr, imB_graphics.Size);
+            imB_graphics.Update();*/
+            VideoUtil.loadVideo_stereo_1("1.mp4", imB_graphics);
         }
 
         private void timer_feedback_Tick(object sender, EventArgs e)
@@ -194,5 +197,6 @@ namespace TensomUI
                 DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" +
                 DateTime.Now.Second.ToString() + "_");
         }
+
     }
 }
