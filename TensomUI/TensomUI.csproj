@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F3047815-9380-4604-9719-E09256A3D101}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Spheroid_scara</RootNamespace>
-    <AssemblyName>Spheroid_scara</AssemblyName>
+    <RootNamespace>TensomUI</RootNamespace>
+    <AssemblyName>TensomUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

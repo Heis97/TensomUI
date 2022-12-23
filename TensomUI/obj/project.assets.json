@@ -860,11 +860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\source\\repos\\Heis97\\Spheroid_scara\\TensomUI\\Spheroid_scara.csproj",
-      "projectName": "Spheroid_scara",
-      "projectPath": "C:\\Users\\1\\source\\repos\\Heis97\\Spheroid_scara\\TensomUI\\Spheroid_scara.csproj",
+      "projectUniqueName": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\TensomUI.csproj",
+      "projectName": "TensomUI",
+      "projectPath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\TensomUI.csproj",
       "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\source\\repos\\Heis97\\Spheroid_scara\\TensomUI\\obj\\",
+      "outputPath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

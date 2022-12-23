@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W1y2WycpPyJN0u5n/Z1nkza9p96rlg6hnKdvTZxs5FbRfKeNFKB2RfJs4TL0MyQfFEty+4yvuucdX+TuSWyRlA==",
+  "dgSpecHash": "ZcGtt/Wv82aUJrrrLzARPgKem/jLMcIMfQBhhv4okbciA0bxpbJPAD0BnB0cjeR3ewT7wb4ECk+SkbDZFtCORQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1\\source\\repos\\Heis97\\Spheroid_scara\\TensomUI\\Spheroid_scara.csproj",
+  "projectFilePath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\TensomUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1\\.nuget\\packages\\emgu.cv\\4.5.5.4823\\emgu.cv.4.5.5.4823.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\emgu.cv.bitmap\\4.5.5.4823\\emgu.cv.bitmap.4.5.5.4823.nupkg.sha512",
