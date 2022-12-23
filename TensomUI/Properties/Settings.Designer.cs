@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TensomUI.Properties {
+namespace Spher_scara.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZcGtt/Wv82aUJrrrLzARPgKem/jLMcIMfQBhhv4okbciA0bxpbJPAD0BnB0cjeR3ewT7wb4ECk+SkbDZFtCORQ==",
+  "dgSpecHash": "NILOwayNHk26TYnDWy0AkPvVXtXvmtWNSBVTzFp4B+BRw702//9Iqsg6XDGA811RhsyKgIYwU+fQ4eXYytFOyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\TensomUI.csproj",
+  "projectFilePath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\Spher_scara.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1\\.nuget\\packages\\emgu.cv\\4.5.5.4823\\emgu.cv.4.5.5.4823.nupkg.sha512",
     "C:\\Users\\1\\.nuget\\packages\\emgu.cv.bitmap\\4.5.5.4823\\emgu.cv.bitmap.4.5.5.4823.nupkg.sha512",

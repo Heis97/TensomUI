@@ -1,0 +1,16 @@
+C:\Users\1\Source\Repos\TensomUI\TensomUI\bin\Debug\Spher_scara.exe.config
+C:\Users\1\Source\Repos\TensomUI\TensomUI\bin\Debug\Spher_scara.exe
+C:\Users\1\Source\Repos\TensomUI\TensomUI\bin\Debug\Spher_scara.pdb
+C:\Users\1\Source\Repos\TensomUI\TensomUI\bin\Debug\Emgu.CV.Platform.NetStandard.dll
+C:\Users\1\Source\Repos\TensomUI\TensomUI\bin\Debug\Emgu.CV.Bitmap.dll
+C:\Users\1\Source\Repos\TensomUI\TensomUI\bin\Debug\Emgu.CV.Platform.NetFramework.dll
+C:\Users\1\Source\Repos\TensomUI\TensomUI\bin\Debug\System.Drawing.Common.dll
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.csproj.AssemblyReference.cache
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.csproj.SuggestedBindingRedirects.cache
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\TensomUI.MainForm.resources
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.Properties.Resources.resources
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.csproj.GenerateResource.cache
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.csproj.CoreCompileInputs.cache
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.csproj.CopyComplete
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.exe
+C:\Users\1\Source\Repos\TensomUI\TensomUI\obj\Debug\Spher_scara.pdb

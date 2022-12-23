@@ -860,9 +860,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\TensomUI.csproj",
-      "projectName": "TensomUI",
-      "projectPath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\TensomUI.csproj",
+      "projectUniqueName": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\Spher_scara.csproj",
+      "projectName": "Spher_scara",
+      "projectPath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\Spher_scara.csproj",
       "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\1\\Source\\Repos\\TensomUI\\TensomUI\\obj\\",
       "projectStyle": "PackageReference",
