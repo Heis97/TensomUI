@@ -198,5 +198,29 @@ namespace TensomUI
                 DateTime.Now.Second.ToString() + "_");
         }
 
+        private void but_down_vel_Click(object sender, EventArgs e)
+        {
+            tensom?.down_vel(Convert.ToDouble(tb_down_vel.Text));
+        }
+
+        private void but_up_vel_Click(object sender, EventArgs e)
+        {
+            tensom?.up_vel(Convert.ToDouble(tb_up_vel.Text));
+        }
+
+        private void but_set_k_p_Click(object sender, EventArgs e)
+        {
+            tensom?.set_k_p_p(Convert.ToDouble(tb_k_p.Text));
+        }
+
+        private void but_set_k_v_Click(object sender, EventArgs e)
+        {
+            tensom?.set_k_v_p(Convert.ToDouble(tb_k_v.Text));
+        }
+
+        private void but_move_stop_Click(object sender, EventArgs e)
+        {
+            tensom?.move_stop();
+        }
     }
 }

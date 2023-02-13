@@ -83,10 +83,12 @@ namespace Connection
                     Mes1 = Convert.ToString(val);
                     Mes2 = Convert.ToString(var);
                 }
+                
                 catch
                 {
                     Console.WriteLine("except convert");
                 }
+                Console.WriteLine(Mes1 + " " + Mes2);
                 if (Mes1.Length <= 4 && Mes2.Length <= 3)
                 {
 

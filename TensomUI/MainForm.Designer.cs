@@ -59,6 +59,15 @@
             this.but_clear_data = new System.Windows.Forms.Button();
             this.but_save_data = new System.Windows.Forms.Button();
             this.imageBox1 = new Emgu.CV.UI.ImageBox();
+            this.but_down_vel = new System.Windows.Forms.Button();
+            this.tb_down_vel = new System.Windows.Forms.TextBox();
+            this.but_up_vel = new System.Windows.Forms.Button();
+            this.tb_up_vel = new System.Windows.Forms.TextBox();
+            this.but_set_k_p = new System.Windows.Forms.Button();
+            this.tb_k_p = new System.Windows.Forms.TextBox();
+            this.tb_k_v = new System.Windows.Forms.TextBox();
+            this.but_set_k_v = new System.Windows.Forms.Button();
+            this.but_move_stop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imB_graphics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +144,7 @@
             this.but_set_force.Name = "but_set_force";
             this.but_set_force.Size = new System.Drawing.Size(104, 40);
             this.but_set_force.TabIndex = 6;
-            this.but_set_force.Text = "Установить значение силы";
+            this.but_set_force.Text = "Установить значение силы, г";
             this.but_set_force.UseVisualStyleBackColor = true;
             this.but_set_force.Click += new System.EventHandler(this.but_set_force_Click);
             // 
@@ -192,9 +201,9 @@
             this.label1.Location = new System.Drawing.Point(10, 312);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Время усилия";
+            this.label1.Text = "Время усилия, мс";
             // 
             // label2
             // 
@@ -202,9 +211,9 @@
             this.label2.Location = new System.Drawing.Point(9, 335);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 13);
+            this.label2.Size = new System.Drawing.Size(123, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Время релаксации";
+            this.label2.Text = "Время релаксации, мс";
             // 
             // label3
             // 
@@ -212,9 +221,9 @@
             this.label3.Location = new System.Drawing.Point(10, 358);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 13);
+            this.label3.Size = new System.Drawing.Size(161, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Максимальная амплитуда";
+            this.label3.Text = "Максимальная амплитуда, мс";
             // 
             // but_tens_up
             // 
@@ -336,7 +345,7 @@
             // 
             // but_clear_data
             // 
-            this.but_clear_data.Location = new System.Drawing.Point(1180, 134);
+            this.but_clear_data.Location = new System.Drawing.Point(499, 530);
             this.but_clear_data.Margin = new System.Windows.Forms.Padding(2);
             this.but_clear_data.Name = "but_clear_data";
             this.but_clear_data.Size = new System.Drawing.Size(104, 30);
@@ -347,7 +356,7 @@
             // 
             // but_save_data
             // 
-            this.but_save_data.Location = new System.Drawing.Point(1180, 169);
+            this.but_save_data.Location = new System.Drawing.Point(607, 530);
             this.but_save_data.Margin = new System.Windows.Forms.Padding(2);
             this.but_save_data.Name = "but_save_data";
             this.but_save_data.Size = new System.Drawing.Size(104, 45);
@@ -364,11 +373,111 @@
             this.imageBox1.TabIndex = 27;
             this.imageBox1.TabStop = false;
             // 
+            // but_down_vel
+            // 
+            this.but_down_vel.Location = new System.Drawing.Point(1008, 16);
+            this.but_down_vel.Margin = new System.Windows.Forms.Padding(2);
+            this.but_down_vel.Name = "but_down_vel";
+            this.but_down_vel.Size = new System.Drawing.Size(104, 42);
+            this.but_down_vel.TabIndex = 28;
+            this.but_down_vel.Text = "Опустить со скоростью, мм/с";
+            this.but_down_vel.UseVisualStyleBackColor = true;
+            this.but_down_vel.Click += new System.EventHandler(this.but_down_vel_Click);
+            // 
+            // tb_down_vel
+            // 
+            this.tb_down_vel.Location = new System.Drawing.Point(1116, 28);
+            this.tb_down_vel.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_down_vel.Name = "tb_down_vel";
+            this.tb_down_vel.Size = new System.Drawing.Size(76, 20);
+            this.tb_down_vel.TabIndex = 29;
+            this.tb_down_vel.Text = "0";
+            // 
+            // but_up_vel
+            // 
+            this.but_up_vel.Location = new System.Drawing.Point(1008, 62);
+            this.but_up_vel.Margin = new System.Windows.Forms.Padding(2);
+            this.but_up_vel.Name = "but_up_vel";
+            this.but_up_vel.Size = new System.Drawing.Size(104, 42);
+            this.but_up_vel.TabIndex = 30;
+            this.but_up_vel.Text = "Поднять со скоростью, мм/с";
+            this.but_up_vel.UseVisualStyleBackColor = true;
+            this.but_up_vel.Click += new System.EventHandler(this.but_up_vel_Click);
+            // 
+            // tb_up_vel
+            // 
+            this.tb_up_vel.Location = new System.Drawing.Point(1116, 74);
+            this.tb_up_vel.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_up_vel.Name = "tb_up_vel";
+            this.tb_up_vel.Size = new System.Drawing.Size(76, 20);
+            this.tb_up_vel.TabIndex = 31;
+            this.tb_up_vel.Text = "0";
+            // 
+            // but_set_k_p
+            // 
+            this.but_set_k_p.Location = new System.Drawing.Point(1007, 169);
+            this.but_set_k_p.Margin = new System.Windows.Forms.Padding(2);
+            this.but_set_k_p.Name = "but_set_k_p";
+            this.but_set_k_p.Size = new System.Drawing.Size(104, 24);
+            this.but_set_k_p.TabIndex = 32;
+            this.but_set_k_p.Text = "k_p, мм/с";
+            this.but_set_k_p.UseVisualStyleBackColor = true;
+            this.but_set_k_p.Click += new System.EventHandler(this.but_set_k_p_Click);
+            // 
+            // tb_k_p
+            // 
+            this.tb_k_p.Location = new System.Drawing.Point(1115, 172);
+            this.tb_k_p.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_k_p.Name = "tb_k_p";
+            this.tb_k_p.Size = new System.Drawing.Size(76, 20);
+            this.tb_k_p.TabIndex = 33;
+            this.tb_k_p.Text = "5";
+            // 
+            // tb_k_v
+            // 
+            this.tb_k_v.Location = new System.Drawing.Point(1115, 200);
+            this.tb_k_v.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_k_v.Name = "tb_k_v";
+            this.tb_k_v.Size = new System.Drawing.Size(76, 20);
+            this.tb_k_v.TabIndex = 35;
+            this.tb_k_v.Text = "0.2";
+            // 
+            // but_set_k_v
+            // 
+            this.but_set_k_v.Location = new System.Drawing.Point(1007, 197);
+            this.but_set_k_v.Margin = new System.Windows.Forms.Padding(2);
+            this.but_set_k_v.Name = "but_set_k_v";
+            this.but_set_k_v.Size = new System.Drawing.Size(104, 24);
+            this.but_set_k_v.TabIndex = 34;
+            this.but_set_k_v.Text = "k_v, мм/с";
+            this.but_set_k_v.UseVisualStyleBackColor = true;
+            this.but_set_k_v.Click += new System.EventHandler(this.but_set_k_v_Click);
+            // 
+            // but_move_stop
+            // 
+            this.but_move_stop.Location = new System.Drawing.Point(1008, 108);
+            this.but_move_stop.Margin = new System.Windows.Forms.Padding(2);
+            this.but_move_stop.Name = "but_move_stop";
+            this.but_move_stop.Size = new System.Drawing.Size(104, 42);
+            this.but_move_stop.TabIndex = 36;
+            this.but_move_stop.Text = "Остановить";
+            this.but_move_stop.UseVisualStyleBackColor = true;
+            this.but_move_stop.Click += new System.EventHandler(this.but_move_stop_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1295, 584);
+            this.Controls.Add(this.but_move_stop);
+            this.Controls.Add(this.tb_k_v);
+            this.Controls.Add(this.but_set_k_v);
+            this.Controls.Add(this.tb_k_p);
+            this.Controls.Add(this.but_set_k_p);
+            this.Controls.Add(this.tb_up_vel);
+            this.Controls.Add(this.but_up_vel);
+            this.Controls.Add(this.tb_down_vel);
+            this.Controls.Add(this.but_down_vel);
             this.Controls.Add(this.imageBox1);
             this.Controls.Add(this.but_save_data);
             this.Controls.Add(this.but_clear_data);
@@ -440,6 +549,15 @@
         private System.Windows.Forms.Button but_clear_data;
         private System.Windows.Forms.Button but_save_data;
         private Emgu.CV.UI.ImageBox imageBox1;
+        private System.Windows.Forms.Button but_down_vel;
+        private System.Windows.Forms.TextBox tb_down_vel;
+        private System.Windows.Forms.Button but_up_vel;
+        private System.Windows.Forms.TextBox tb_up_vel;
+        private System.Windows.Forms.Button but_set_k_p;
+        private System.Windows.Forms.TextBox tb_k_p;
+        private System.Windows.Forms.TextBox tb_k_v;
+        private System.Windows.Forms.Button but_set_k_v;
+        private System.Windows.Forms.Button but_move_stop;
     }
 }
 

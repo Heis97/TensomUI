@@ -10,7 +10,7 @@ namespace Connection
     {
         string port;
         int baudrate = 250000;
-        int dir_move = 0, 
+        int dir_move = 13, 
             vel_move = 1,
             force_dest = 2,
             force_en=3, 
@@ -20,10 +20,12 @@ namespace Connection
             force_max = 7,
             time_force = 8,
             time_relax = 9,
-            light_en = 10;
+            light_en = 10,
+        k_p_p = 11,
+            k_v_p = 12;
 
         int on = 1, off = 0;
-        int up = 0, stop = 1, down = 2;
+        int up = 2, stop = 1, down = 0;
         int cycle_stop = 0, cycle_meandr = 1, cycle_triangle = 2, cycle_sinus = 3;
       
         public Tensom(string _port)
@@ -38,6 +40,29 @@ namespace Connection
         public void connectStop()
         {
             close();
+        }
+        public void set_k_p_p(double val)
+        {
+            send((int)(val * 100),k_p_p);
+        }
+        public void set_k_v_p(double val)
+        {
+            send((int)(val * 100),k_v_p);
+        }
+        public void move_stop()
+        {
+            send(stop,dir_move);
+        }
+        public void up_vel(double vel)
+        {
+            send(up,dir_move);
+            send((int) (vel * 100),vel_move);
+        }
+
+        public void down_vel(double vel)
+        {
+            send(down,dir_move);
+            send((int)(vel * 100),vel_move);
         }
         public void sensorUp()
         {
