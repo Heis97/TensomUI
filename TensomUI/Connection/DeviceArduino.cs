@@ -89,10 +89,10 @@ namespace Connection
                     Console.WriteLine("except convert");
                 }
                 Console.WriteLine(Mes1 + " " + Mes2);
-                if (Mes1.Length <= 4 && Mes2.Length <= 3)
+                if (Mes1.Length <= 5 && Mes2.Length <= 3)
                 {
 
-                    while (Mes1.Length < 4)
+                    while (Mes1.Length < 5)
                     {
                         Mes1 = "0" + Mes1;
                     }

@@ -68,6 +68,9 @@
             this.tb_k_v = new System.Windows.Forms.TextBox();
             this.but_set_k_v = new System.Windows.Forms.Button();
             this.but_move_stop = new System.Windows.Forms.Button();
+            this.tb_set_temp = new System.Windows.Forms.TextBox();
+            this.but_set_temp = new System.Windows.Forms.Button();
+            this.but_heat_en = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imB_graphics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.SuspendLayout();
@@ -367,7 +370,7 @@
             // 
             // imageBox1
             // 
-            this.imageBox1.Location = new System.Drawing.Point(1008, 228);
+            this.imageBox1.Location = new System.Drawing.Point(1008, 332);
             this.imageBox1.Name = "imageBox1";
             this.imageBox1.Size = new System.Drawing.Size(281, 262);
             this.imageBox1.TabIndex = 27;
@@ -464,11 +467,45 @@
             this.but_move_stop.UseVisualStyleBackColor = true;
             this.but_move_stop.Click += new System.EventHandler(this.but_move_stop_Click);
             // 
+            // tb_set_temp
+            // 
+            this.tb_set_temp.Location = new System.Drawing.Point(1115, 250);
+            this.tb_set_temp.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_set_temp.Name = "tb_set_temp";
+            this.tb_set_temp.Size = new System.Drawing.Size(76, 20);
+            this.tb_set_temp.TabIndex = 38;
+            this.tb_set_temp.Text = "80";
+            // 
+            // but_set_temp
+            // 
+            this.but_set_temp.Location = new System.Drawing.Point(1007, 247);
+            this.but_set_temp.Margin = new System.Windows.Forms.Padding(2);
+            this.but_set_temp.Name = "but_set_temp";
+            this.but_set_temp.Size = new System.Drawing.Size(104, 24);
+            this.but_set_temp.TabIndex = 37;
+            this.but_set_temp.Text = "Установ темпер";
+            this.but_set_temp.UseVisualStyleBackColor = true;
+            this.but_set_temp.Click += new System.EventHandler(this.but_set_temp_Click);
+            // 
+            // but_heat_en
+            // 
+            this.but_heat_en.Location = new System.Drawing.Point(1007, 275);
+            this.but_heat_en.Margin = new System.Windows.Forms.Padding(2);
+            this.but_heat_en.Name = "but_heat_en";
+            this.but_heat_en.Size = new System.Drawing.Size(104, 24);
+            this.but_heat_en.TabIndex = 39;
+            this.but_heat_en.Text = "Вкл нагрев";
+            this.but_heat_en.UseVisualStyleBackColor = true;
+            this.but_heat_en.Click += new System.EventHandler(this.but_heat_en_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1295, 584);
+            this.Controls.Add(this.but_heat_en);
+            this.Controls.Add(this.tb_set_temp);
+            this.Controls.Add(this.but_set_temp);
             this.Controls.Add(this.but_move_stop);
             this.Controls.Add(this.tb_k_v);
             this.Controls.Add(this.but_set_k_v);
@@ -558,6 +595,9 @@
         private System.Windows.Forms.TextBox tb_k_v;
         private System.Windows.Forms.Button but_set_k_v;
         private System.Windows.Forms.Button but_move_stop;
+        private System.Windows.Forms.TextBox tb_set_temp;
+        private System.Windows.Forms.Button but_set_temp;
+        private System.Windows.Forms.Button but_heat_en;
     }
 }
 

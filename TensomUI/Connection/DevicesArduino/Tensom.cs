@@ -21,8 +21,10 @@ namespace Connection
             time_force = 8,
             time_relax = 9,
             light_en = 10,
-        k_p_p = 11,
-            k_v_p = 12;
+            k_p_p = 11,
+            k_v_p = 12,
+            temperature = 15,
+            heat_en = 14;
 
         int on = 1, off = 0;
         int up = 2, stop = 1, down = 0;
@@ -112,7 +114,13 @@ namespace Connection
             send(_enable, light_en);
         }
 
-        
-
+        public void enableHeat(int _enable)
+        {
+            send(_enable, heat_en);
+        }
+        public void set_temperature(int _temperatue)
+        {
+            send(_temperatue, temperature);
+        }
     }
 }

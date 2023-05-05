@@ -222,5 +222,26 @@ namespace TensomUI
         {
             tensom?.move_stop();
         }
+
+        private void but_set_temp_Click(object sender, EventArgs e)
+        {
+            tensom?.set_temperature((int)(Convert.ToDouble(tb_set_temp.Text) * 10));
+        }
+
+        private void but_heat_en_Click(object sender, EventArgs e)
+        {
+            if(but_heat_en.Text == "Вкл нагрев")
+            {
+                tensom?.enableHeat(1);
+                but_heat_en.Text = "Выкл нагрев";
+            }
+            else
+            {
+                tensom?.enableHeat(0);
+                but_heat_en.Text = "Вкл нагрев";
+            }
+            
+
+        }
     }
 }
